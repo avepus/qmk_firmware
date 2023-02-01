@@ -5,6 +5,8 @@
 
 #pragma once
 
+#define CHARYBDIS_DRAGSCROLL_REVERSE_Y
+
 #define XXX KC_NO
 
 #define LAYOUT_miryoku( \
