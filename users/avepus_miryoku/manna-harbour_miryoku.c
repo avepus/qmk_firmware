@@ -11,6 +11,19 @@
 void pointing_device_init_user(void) {
     set_auto_mouse_enable(true);         // always required before the auto mouse feature will work
 }
+
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case LGUI_T(KC_A):
+        case LALT_T(KC_S):
+        case LALT_T(KC_L):
+        case LGUI_T(KC_SEMICOLON):
+          return TAPPING_TERM + 200;
+        default:
+            return TAPPING_TERM;
+    }
+}
+
 //avepus end
 
 // Additional Features double tap guard
