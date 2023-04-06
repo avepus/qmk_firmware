@@ -24,6 +24,11 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     }
 }
 
+const uint16_t PROGMEM drgscrl_combo[] = {KC_M, KC_COMM, COMBO_END};
+combo_t key_combos[COMBO_COUNT] = {
+    COMBO(drgscrl_combo, DRG_TOG),
+};
+
 //avepus end
 
 // Additional Features double tap guard
